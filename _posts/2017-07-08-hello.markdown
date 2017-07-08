@@ -1,7 +1,0 @@
----
-layout: mylayout
-title:  Hello Jekyll!
-date:	2017-07-08 18:14:00
----
-
-Hello jekyll!
