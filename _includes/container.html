@@ -1,0 +1,217 @@
+
+ {% include carousel.html %}
+	
+        <!-- Post Feed -->
+         <section id="articles" class="post-grid">
+            <div class="container">
+               <div class="row has-sidebar-right">
+
+                  <!--Content Column-->
+                  <div class="col-md-8 pull-left flex">
+                     <div class="row">
+						<div class="front-ads">
+							<a href="https://graphicriver.net/?ref=webthemethemplates" target="_blank">
+							<img src="/img/graphicriver.jpg" class="img-responsive">
+						</div>
+						
+						<!-- Easy Recipes -->
+                        <article id="columns" class="post-block col-md-6 post hentry">
+                           <div class="box-content">
+								
+									{% for post in paginator.posts %}
+										
+											
+											<h2>
+												<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+											</h2>
+											<p>Posted on <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> <i class="fa fa-user"></i> by <a href="/" style="color: #0E768A;"> {{ post.author}}</a></p>
+											{{ post.excerpt }}
+											<div class="btn btn-default">
+											{% if post.content | post_contains_excerpt_tag %}
+											<a class="btn-links" href="{{ post.url }}">Read the recipe</a>
+											{% endif %}
+											</div>
+											<div class="clearfix"></div>
+                           </div>
+						   
+                        </article>
+							
+                        <article id="columns" class="post-block col-md-6 post hentry">
+                           <div class="box-content">
+                              
+								{% endfor %} 
+								<div class="clearfix"></div>
+								
+                           </div>
+						   <div class="clearfix"></div>
+                        </article>
+
+						
+
+                     </div>
+                  </div>
+                  <!--/Content Column-->
+				  
+
+                  <!--Sidebar-->
+                  <div class="col-md-4 sticky-column" data-sticky_column >
+                     <div class="sidebar">
+
+                        <!--Newsletter Widget-->
+                        <aside id="newsletter-widget" class="newsletter-widget">
+                           <h4 class="lead">Subscribe</h4>
+                            <p class="sidebar-p">Subscribe to receive updates and the latest posts about easy recipes. I won't spam.</p>
+                           <div class="newsletter newsletter-widget">
+								<form style="padding:3px;text-align: center; margin: 20px;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=getyourfreebiesnow', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p style="text-align: left;">Enter your email address:</p>
+								<p><input type="text" style="width: 100%; display: block; height: 40px; font-size: 12px; background-color: #F8F8F8; padding-left: 10px; border: 1px solid #ccc;" name="email" placeholder="Email address..."/></p>
+								<input type="hidden" value="getyourfreebiesnow" name="uri"/><input type="hidden" name="loc" value="en_US"/>
+								<input type="submit" value="Subscribe" style="width: 100%; display: block; background-color: #674a4f; color: white; border-color: #926870; padding-left: 10px; height: 40px; font-size: 20px; font-weight: bold;"/>
+								<p>Delivered by <a href="https://feedburner.google.com" target="_blank">FeedBurner</a></p>
+								</form>
+                           </div>
+                           <div class="clearfix"></div>
+                        </aside>
+                        <!--/Newsletter Widget-->
+                        <!--Advertisement Widget-->
+                        <aside id="advertisement" class="advertisement">
+                           <h4 class="lead">Advertisement</h4>
+                           	<a href="http://www.airrayagroup.com/contact.html" target="_blank">
+							<img src="/bloggy/img/ads.png" class="img-responsive">
+                           <div class="clearfix"></div>
+                        </aside>
+                        <!--/Advertisement-->
+						
+                        <!--Resent Posts Widget-->
+                        <aside id="recent-widget" class="recent-post">
+                           <h4 class="lead">Recent Post</h4>
+                           <div>
+                              <div class="recent-blogpost">
+                                    {% for post in site.posts limit:5 %}  
+									
+								   <h4 class="recent-post-links"><span>{{ post.date | date_to_string }}</span> <a href="{{ BASE_PATH }}/bloggy{{ post.url }}" style="color: #0E768A;">{{ post.title }}</a></h4>  
+									
+                              </div>
+                              <div class="recent-blogpost">
+                                    {% endfor %} 
+                              </div>
+                           </div>
+                           <div class="clearfix"></div>
+                        </aside>
+                        <!--/Resent Posts Widget-->
+
+                        <!--Featured Widget-->
+                        <aside id="featured-widget" class="widget-featured">
+                           <h4 class="lead">Featured</h4>
+                           <div>
+                              <div class="media">
+                                 <div class="media-body"><a href="#"><img src='{{ "/assets/salad.jpg" | prepend: site.baseurl }}' class="img-responsive" alt="fried kwetiau"></a></div>
+                                 <div class="media-body"><a href="#"><img src='{{ "/assets/soup.jpg" | prepend: site.baseurl }}' class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src='{{ "/assets/cookies.jpg" | prepend: site.baseurl }}' class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src='{{ "/assets/cake.jpg" | prepend: site.baseurl }}' class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src='{{ "/assets/appetizer.jpg" | prepend: site.baseurl }}' class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src='{{ "/assets/pancake.jpg" | prepend: site.baseurl }}' class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src='{{ "/assets/lunch.jpg" | prepend: site.baseurl }}' class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src='{{ "/assets/fish.jpg" | prepend: site.baseurl }}' class="img-responsive" alt=""></a></div>
+                                 <div class="media-body"><a href="#"><img src='{{ "/assets/dinner.jpg" | prepend: site.baseurl }}' class="img-responsive" alt=""></a></div>
+                              </div>
+                           </div>
+                           <div class="clearfix"></div>
+                        </aside>
+                        <!--/Featured Widget-->
+
+						<!--Advertisement Widget-->
+                        <aside id="advertisement" class="advertisement">
+                           <h4 class="lead">Advertisement</h4>
+								<a href="https://graphicriver.net/?ref=webthemethemplates" target="_blank">
+							<img src="/img/themeforest.jpg" class="img-responsive">
+                           <div class="clearfix"></div>
+                        </aside>
+                        <!--/Advertisement-->
+						
+                        <!--Categories Widget-->
+                        <aside id="categories" class="widget-categories">
+							<h4 class="lead">Categories</h4>
+								<div class="category-widget">
+								   <div class="col-lg-6">
+										{% for cat in site.categories %}
+										{% assign cat_name = cat | first %}
+										{% assign cat_size = cat | last | size %}
+										{% assign cat_slug = cat_name | slugify  %}
+											<a class="bold-cat" href="{{ BASE_PATH }}/bloggy/category/{{cat_slug}}" style="color: #0E768A;">
+												{{cat_name}} ({{cat_size}})
+											</a>
+									</div>
+									<div class="col-lg-6">
+										{% endfor %}
+									</div>
+								</div>
+                           <div class="clearfix"></div>
+                        </aside>
+                        <!--/Categories Widget-->
+						<!--Tags Widget-->
+                        <aside id="categories" class="widget-categories">
+							<h4 class="lead">Tags</h4>
+								<div class="category-widget">
+								   <div class="col-lg-6">
+										{% for tag in site.tags %}
+										{% assign tag_name = tag | first %}
+										{% assign tag_size = tag | last | size %}
+										{% assign tag_slug = tag_name | slugify  %}
+											<a class="tag-label bold" href="{{ BASE_PATH }}/bloggy/tag/{{tag_slug}}" style="color: #0E768A;">
+												{{tag_name}} ({{tag_size}})
+											</a>
+									</div>
+									<div class="col-lg-6">
+										{% endfor %}
+									</div>
+								</div>
+                           <div class="clearfix"></div>
+                        </aside>
+                        <!--/tags Widget-->
+						
+                     </div>
+                  </div>
+                  <!--/Sidebar-->			  
+               </div>
+            </div>
+         </section>
+		 <section>
+         <!-- /Post Feed -->
+		                        <!-- Pagination links -->
+							<div class="pagination">
+								  <ul>
+									{% if paginator.previous_page %}
+
+									  {% if paginator.previous_page == 1 %}
+										<li><a href="/bloggy">Previous</a></li>
+									  {% else %}
+										<li><a href="/page{{ paginator.previous_page }}">Previous</a></li>
+									  {% endif %}
+
+									{% else %}
+									  <li><span class="disabled">Previous</span></li>
+									{% endif %}
+
+									{% if paginator.page == 1 %}
+									  <li><span class="active">1</span></li>
+									{% else %}
+									  <li><a href="/bloggy">1</a></li>
+									{% endif %}
+
+									{% for count in (2..paginator.total_pages) %}
+
+									  {% if count == paginator.page %}
+										<li><span class="active">{{ count }}</span></li>
+									  {% else %}
+										<li><a href="/bloggy/page{{ count }}">{{ count }}</a></li>
+									  {% endif %}
+									{% endfor %}
+
+									{% if paginator.next_page %}
+									  <li><a href="/bloggy/page{{ paginator.next_page }}">Next</a></li>
+									{% else %}
+									  <li><span class="disabled">Next</span></li>
+									{% endif %}
+								  </ul>
+							</div><!-- Pagination links -->
+		</section>

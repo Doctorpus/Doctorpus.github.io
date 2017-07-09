@@ -1,0 +1,10 @@
+---
+layout: categories_list
+cat_name: 'Salads'
+---
+
+{% for post in site.categories.['salads'] %}
+
+  {% include categoryandtags.html %}
+
+{% endfor %}

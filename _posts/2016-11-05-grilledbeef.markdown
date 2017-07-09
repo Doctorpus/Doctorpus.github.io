@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Grilled Beef"
+date:   2016-11-05
+categories: ['beef']
+tags: 
+
+# Author.
+author: Best Recipes
+---
+![Salad]({{ site.baseurl }}/assets/grilledbeef.jpg){:class="img-responsive center"}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. Curabitur sed quam ac ipsum cursus pretium. Vivamus bibendum, nunc ac lobortis dictum, mi velit venenatis elit, at bibendum nulla libero vitae velit. Vivamus lacinia non odio et laoreet. <!-- more -->	 Aliquam blandit imperdiet tristique. Ut ut dictum lacus, non venenatis est. Nulla condimentum ut massa at condimentum. Nulla dui turpis, lobortis ut massa sed, posuere consequat odio. Curabitur luctus ac nisi et interdum. Quisque elementum porttitor egestas.
+
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. 
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. 
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. 
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. 
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. 
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. 
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. 
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. 
+
+<!-- more -->	
+
+Morbi sodales felis vitae arcu sollicitudin, sed tristique leo varius. Morbi vulputate tellus a lacinia efficitur. Donec semper neque porta tortor faucibus, non vehicula elit lobortis. Nulla ultrices, mauris non consequat vestibulum, nisi nunc viverra diam, sed feugiat orci purus in arcu. Sed sagittis, arcu id molestie volutpat, tortor odio dictum lorem, nec posuere metus justo eget sem. Nulla auctor aliquet iaculis. Curabitur id mauris sollicitudin, eleifend turpis in, fermentum libero. Mauris pharetra auctor massa in aliquam. Morbi vel congue ipsum. Fusce condimentum metus diam, quis ultrices mi tempor eget. Sed quis turpis iaculis, pellentesque nulla at, sodales dui. Duis eros magna, euismod id luctus quis, sollicitudin quis elit. Quisque accumsan dignissim nulla, a varius lectus. Maecenas ut mi et turpis lacinia dignissim id ac justo.
+
+Sed feugiat at leo in sagittis. Duis euismod tempus dolor, varius sagittis velit pulvinar id. Maecenas tempor ut purus eget luctus. Maecenas facilisis tincidunt diam a semper. Aliquam varius ante vitae lorem rhoncus, ac hendrerit velit laoreet. Mauris viverra consectetur ligula id convallis. Nullam et ullamcorper augue. Phasellus in ipsum metus. Mauris convallis at dui at semper. Donec ornare nibh quam, sed porta mauris fermentum quis. Etiam sed luctus lacus, a congue lorem. Etiam tincidunt mauris libero, quis faucibus magna pellentesque sit amet.
