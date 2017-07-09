@@ -1,30 +1,66 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1504.83">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Menlo; color: #999999; -webkit-text-stroke: #999999; background-color: #f6f6f6}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Menlo; color: #333333; -webkit-text-stroke: #333333; background-color: #f6f6f6}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Menlo; color: #dd1144; -webkit-text-stroke: #dd1144; background-color: #f6f6f6}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; color: #dd1144; -webkit-text-stroke: 0px #dd1144}
-    span.s3 {font-kerning: none; color: #333333; -webkit-text-stroke: 0px #333333}
-    span.s4 {font-kerning: none; color: #008080; -webkit-text-stroke: 0px #008080}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1"><b>---</b></span></p>
-<p class="p2"><span class="s1">layout: </span><span class="s2">post</span></p>
-<p class="p3"><span class="s3">title: </span><span class="s1">Hello</span><span class="s3"> </span><span class="s1">Jekyll!</span></p>
-<p class="p1"><span class="s1"><b>---</b></span></p>
-<p class="p3"><span class="s1">&lt;ul</span><span class="s3"> </span><span class="s1">class="posts"&gt;</span></p>
-<p class="p3"><span class="s1">{%</span><span class="s3"> </span><span class="s1">for</span><span class="s3"> </span><span class="s1">post</span><span class="s3"> </span><span class="s1">in</span><span class="s3"> </span><span class="s1">site.posts</span><span class="s3"> </span><span class="s1">%}</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;li&gt;&lt;span&gt;{{</span><span class="s3"> </span><span class="s1">post.date</span><span class="s3"> </span><span class="s1">| date_to_string }}&lt;/span&gt; &amp;raquo; &lt;a href="</span><span class="s4">{{ post.url }}</span><span class="s1">"&gt;</span><span class="s4">{{ post.title }}</span><span class="s1">&lt;/a&gt;&lt;/li&gt;</span></p>
-<p class="p3"><span class="s1">{% endfor %}</span></p>
-<p class="p3"><span class="s1">&lt;/ul&gt;</span></p>
-</body>
-</html>
+---
+layout: default
+menu: home
+css: ['index.css', 'sidebar-popular-repo.css']
+---
+<section class="jumbotron">
+    <div class="container">
+        <h1>{{ site.title }}</h1>
+        <div id="jumbotron-meta-info">
+            {% if site.location %}
+            <span class="meta-info">
+                <span class="octicon octicon-location"></span>
+                {{ site.location }}
+            </span> {% endif %}
+            {% if site.company %}
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-organization"></span>
+                <a href="{{ site.company_url }}" target="_blank">{{ site.company }}</a>
+            </span> {% endif %}
+            {% if site.github_url %}
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-mark-github"></span>
+                <a href="{{ site.github_url }}" target="_blank">@{{ site.name }}</a>
+            </span> {% endif %}
+        </div>
+    </div>
+</section>
+<section class="content container">
+
+    <div class="row">
+
+        <!-- Post List -->
+        <div class="col-md-8">
+
+            <ol class="post-list">
+                {% for post in paginator.posts %}
+                <li class="post-list-item">
+                    <h2 class="post-list-title">
+                        <a class="hvr-underline-from-center" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                    </h2>
+                    <p class="post-list-description">
+                        {{ post.excerpt | strip_html | strip }}
+                    </p>
+                    <p class="post-list-meta">
+                        <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+                    </p>
+                </li>
+                {% endfor %}
+            </ol>
+
+            <!-- Pagination -->
+            {% include pagination.html %}
+
+            <!-- Comments -->
+            {% include disqus-comments.html %}
+
+        </div>
+
+        <div class="col-md-4">
+            {% include sidebar-popular-repo.html %}
+        </div>
+
+    </div>
+
+</section>
+
